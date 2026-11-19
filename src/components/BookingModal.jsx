@@ -3,7 +3,7 @@ import { X, Calendar, CheckCircle2, Phone, Mail, MapPin, User, MessageCircle, Se
 import { HennaMandala } from './HennaOrnaments';
 
 // 💡 Change this to your business WhatsApp number (with country code, no + or spaces)
-export const OWNER_WHATSAPP_NUMBER = "919876543210";
+export const OWNER_WHATSAPP_NUMBER = "918780404879";
 
 export const BookingModal = ({ isOpen, onClose, initialData = null }) => {
     const [formData, setFormData] = useState({
@@ -74,31 +74,31 @@ ${formData.specialNotes || 'None specified'}
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
-            <div className="relative max-w-xl w-full bg-white rounded-3xl shadow-2xl border border-stone-200 overflow-hidden my-8">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto duration-200 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in">
+            <div className="relative w-full max-w-xl my-8 overflow-hidden bg-white border shadow-2xl rounded-3xl border-stone-200">
 
                 {/* Modal Header */}
-                <div className="bg-gradient-to-r from-henna-950 via-henna-900 to-henna-950 text-gold-200 p-6 sm:p-8 relative overflow-hidden">
-                    <HennaMandala className="w-48 h-48 text-gold-400/15 absolute -right-12 -top-12 pointer-events-none" spin />
+                <div className="relative p-6 overflow-hidden bg-gradient-to-r from-henna-950 via-henna-900 to-henna-950 text-gold-200 sm:p-8">
+                    <HennaMandala className="absolute w-48 h-48 pointer-events-none text-gold-400/15 -right-12 -top-12" spin />
 
-                    <div className="flex items-center justify-between relative z-10">
+                    <div className="relative z-10 flex items-center justify-between">
                         <div>
                             <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-[11px] font-semibold mb-2">
                                 <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
                                 <span>Direct WhatsApp Inquiry</span>
                             </div>
-                            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                            <h3 className="font-serif text-2xl font-bold text-white sm:text-3xl">
                                 Book Your Mehendi Date
                             </h3>
                         </div>
                         <button
                             onClick={onClose}
-                            className="p-2 rounded-full text-gold-300 hover:text-white hover:bg-white/10 transition-colors"
+                            className="p-2 transition-colors rounded-full text-gold-300 hover:text-white hover:bg-white/10"
                         >
                             <X className="w-6 h-6" />
                         </button>
                     </div>
-                    <p className="text-xs sm:text-sm text-stone-300 mt-2 relative z-10">
+                    <p className="relative z-10 mt-2 text-xs sm:text-sm text-stone-300">
                         Fill in your event details below. All information will be sent directly to the artist's WhatsApp for instant availability confirmation.
                     </p>
                 </div>
@@ -106,24 +106,24 @@ ${formData.specialNotes || 'None specified'}
                 {/* Modal Body */}
                 <div className="p-6 sm:p-8">
                     {isSubmitted ? (
-                        <div className="text-center py-6 space-y-4 animate-in zoom-in-95 duration-300">
-                            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center shadow-inner">
+                        <div className="py-6 space-y-4 text-center duration-300 animate-in zoom-in-95">
+                            <div className="flex items-center justify-center w-16 h-16 mx-auto rounded-full shadow-inner bg-emerald-100 text-emerald-600">
                                 <CheckCircle2 className="w-10 h-10" />
                             </div>
 
-                            <h4 className="font-serif text-2xl sm:text-3xl font-bold text-henna-950">
+                            <h4 className="font-serif text-2xl font-bold sm:text-3xl text-henna-950">
                                 Inquiry Sent to WhatsApp!
                             </h4>
 
-                            <p className="text-stone-600 text-sm max-w-md mx-auto leading-relaxed">
+                            <p className="max-w-md mx-auto text-sm leading-relaxed text-stone-600">
                                 Your booking inquiry for <strong>{formData.name}</strong> on <strong>{formData.eventDate}</strong> has been transferred to WhatsApp. If the chat window didn't open automatically, click the button below.
                             </p>
 
                             {/* Message Summary Preview */}
                             <div className="p-4 rounded-2xl bg-warmcream-100/90 border border-warmcream-300 text-xs text-stone-700 max-w-md mx-auto text-left space-y-1.5 font-mono">
-                                <div className="font-sans font-bold text-henna-950 text-sm pb-1 border-b border-warmcream-300 flex items-center justify-between">
+                                <div className="flex items-center justify-between pb-1 font-sans text-sm font-bold border-b text-henna-950 border-warmcream-300">
                                     <span>Inquiry Summary</span>
-                                    <span className="text-emerald-700 font-semibold text-xs flex items-center gap-1">
+                                    <span className="flex items-center gap-1 text-xs font-semibold text-emerald-700">
                                         <MessageCircle className="w-3.5 h-3.5" /> Ready on WhatsApp
                                     </span>
                                 </div>
@@ -135,7 +135,7 @@ ${formData.specialNotes || 'None specified'}
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
+                            <div className="flex flex-col justify-center gap-3 pt-4 sm:flex-row">
                                 <a
                                     href={lastWhatsappUrl}
                                     target="_blank"
@@ -163,7 +163,7 @@ ${formData.specialNotes || 'None specified'}
                             </div>
 
                             {/* Name & Phone */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
                                         Bride / Client Name *
@@ -190,7 +190,7 @@ ${formData.specialNotes || 'None specified'}
                                         <input
                                             type="tel"
                                             required
-                                            placeholder="+91 98765 43210"
+                                            placeholder="+91 8780404879"
                                             value={formData.phone}
                                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                             className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-stone-300 focus:ring-2 focus:ring-henna-600 focus:border-henna-600 text-sm outline-none transition-all"
@@ -200,7 +200,7 @@ ${formData.specialNotes || 'None specified'}
                             </div>
 
                             {/* Email & Date */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
                                         Email Address *
@@ -236,7 +236,7 @@ ${formData.specialNotes || 'None specified'}
                             </div>
 
                             {/* City & Event Type */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div>
                                     <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">
                                         City / Venue Location *
@@ -298,7 +298,7 @@ ${formData.specialNotes || 'None specified'}
 
                             <div className="text-[11px] text-center text-stone-500 flex items-center justify-center gap-1.5">
                                 <span>Direct client concierge to</span>
-                                <span className="font-semibold text-emerald-700 font-mono">+{OWNER_WHATSAPP_NUMBER}</span>
+                                <span className="font-mono font-semibold text-emerald-700">+{OWNER_WHATSAPP_NUMBER}</span>
                                 <span>• No account or login required</span>
                             </div>
                         </form>

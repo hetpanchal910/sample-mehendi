@@ -28,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-warmcream-50 text-stone-800 relative selection:bg-henna-700 selection:text-gold-200">
+    <div className="relative flex flex-col min-h-screen bg-warmcream-50 text-stone-800 selection:bg-henna-700 selection:text-gold-200">
 
       {/* Navigation */}
       <Navbar onOpenBooking={() => handleOpenBooking()} />
@@ -71,12 +71,12 @@ export default function App() {
       />
 
       {/* Floating Action Button for WhatsApp (Desktop & Tablet) */}
-      <aside aria-label="Quick contact" className="fixed bottom-6 right-6 z-40 hidden sm:flex flex-col gap-3">
+      <aside aria-label="Quick contact" className="fixed z-40 flex-col hidden gap-3 bottom-6 right-6 sm:flex">
         <a
-          href="https://wa.me/919876543210?text=Hi%20Zaara%20Henna,%20I%20would%20like%20to%20inquire%20about%20bridal%20mehndi%20booking"
+          href="https://wa.me/918780404879?text=Hi%20Zaara%20Henna,%20I%20would%20like%20to%20inquire%20about%20bridal%20mehndi%20booking"
           target="_blank"
           rel="noreferrer"
-          className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-xl hover:shadow-2xl transition-all transform hover:scale-110 active:scale-95"
+          className="relative flex items-center justify-center text-white transition-all transform rounded-full shadow-xl group w-14 h-14 bg-emerald-600 hover:bg-emerald-700 hover:shadow-2xl hover:scale-110 active:scale-95"
           title="Chat with Bridal Concierge on WhatsApp"
         >
           <Phone className="w-6 h-6" />
@@ -90,7 +90,7 @@ export default function App() {
       {/* Sticky Bottom Action Bar for Mobile Devices */}
       <nav aria-label="Mobile quick actions" className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-warmcream-50/95 backdrop-blur-md border-t border-stone-200/80 px-4 py-2.5 flex items-center justify-between gap-3 shadow-lg">
         <a
-          href="https://wa.me/919876543210?text=Hi%20Zaara%20Henna,%20I%20would%20like%20to%20inquire%20about%20bridal%20mehndi"
+          href="https://wa.me/918780404879?text=Hi%20Zaara%20Henna,%20I%20would%20like%20to%20inquire%20about%20bridal%20mehndi"
           target="_blank"
           rel="noreferrer"
           className="flex-1 py-2.5 px-3 rounded-xl border border-stone-300 text-stone-800 text-xs font-bold text-center flex items-center justify-center gap-1.5 bg-white"
