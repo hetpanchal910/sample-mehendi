@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+    background-color: #fdfbf7;
+    background-image:
+      radial-gradient(#9b331c0a 1px, transparent 1px),
+      radial-gradient(#d8b2350a 1px, #fdfbf7 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fbf7ee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c59a23;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9b331c;
+}
+
+/* Luxury Gold & Henna Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d8b235 0%, #aa7a1a 50%, #f6e696 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-henna-gradient {
+  background: linear-gradient(135deg, #67271a 0%, #9b331c 50%, #be4326 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #d8b235 0%, #c59a23 50%, #875a18 100%);
+}
+
+.bg-henna-gradient {
+  background: linear-gradient(135deg, #67271a 0%, #7e2c1a 60%, #9b331c 100%);
+}
+
+.bg-glass {
+  background: rgba(255, 253, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-glass-dark {
+  background: rgba(60, 18, 10, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Henna Cone Line Drawing SVG keyframe */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-henna {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Decorative Mandala Border Pattern */
+.mandala-border {
+  border-image: repeating-linear-gradient(45deg, #c59a23, #c59a23 8px, transparent 8px, transparent 16px) 2;
+}
